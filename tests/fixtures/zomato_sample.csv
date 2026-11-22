@@ -1,0 +1,11 @@
+url,address,name,online_order,book_table,rate,votes,phone,location,rest_type,dish_liked,cuisines,approx_cost(for two people),reviews_list,menu_item,listed_in(type),listed_in(city)
+http://example.com/a,Addr A,Alpha Italian,Yes,Yes,4.5/5,100,080,Indiranagar,Casual Dining,Pasta,"Italian, Cafe","1,200",[],[],Delivery,Indiranagar
+http://example.com/b,Addr B,Beta Chinese,Yes,No,3.8/5,50,080,BTM,Quick Bites,Noodles,Chinese,400,[],[],Delivery,BTM
+http://example.com/c,Addr C,Gamma Cafe,No,No,NEW,10,080,Jayanagar,Cafe,,Cafe,300,[],[],Delivery,Jayanagar
+http://example.com/d,Addr D,,Yes,No,4.0/5,20,080,BTM,Casual Dining,,North Indian,500,[],[],Delivery,BTM
+http://example.com/e,Addr E,Epsilon Dup,Yes,No,4.2/5,80,080,BTM,Casual Dining,,"Chinese, Thai",450,[],[],Delivery,BTM
+http://example.com/f,Addr F,Epsilon Dup,Yes,No,4.0/5,30,080,BTM,Casual Dining,,Chinese,450,[],[],Delivery,BTM
+http://example.com/g,Addr G,Zeta Fancy,Yes,Yes,4.8/5,200,080,Koramangala 5th Block,Fine Dining,Steak,European,"2,500",[],[],Dine-out,Koramangala 5th Block
+http://example.com/h,Addr H,Eta Cheap,No,No,3.5/5,15,,HSR,Quick Bites,,South Indian,150,[],[],Delivery,HSR
+http://example.com/i,Addr I,Theta Missing Loc,Yes,No,4.1/5,40,080,,Casual Dining,,Italian,600,[],[],Delivery,Indiranagar
+http://example.com/j,Addr J,Iota Bad Rate,Yes,No,-,5,080,Whitefield,Casual Dining,,Italian,700,[],[],Delivery,Whitefield
