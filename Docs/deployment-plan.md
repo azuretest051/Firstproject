@@ -98,9 +98,11 @@ Suggested service settings:
 | Setting | Value |
 |---|---|
 | Root directory | `/` (repository root) |
-| Build | `pip install -r requirements.txt` (default) |
+| Build | Nixpacks Python provider (auto `pip install -r requirements.txt`) |
 | Start | command above |
 | Watch paths | optional; redeploy on push to `main` |
+
+Do **not** set a custom Railway build command to bare `pip install ...` — on Nixpacks that often fails with `pip: command not found`. Leave build empty and use `nixpacks.toml` + `requirements.txt`.
 
 Optional `Procfile` at repo root (Railway respects it):
 

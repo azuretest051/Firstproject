@@ -1,3 +1,10 @@
+providers = ["python"]
+
+[variables]
+NIXPACKS_PYTHON_VERSION = "3.12"
+
+# Keep default Nixpacks packages ("...") and add gcc for native wheels (e.g. pyarrow).
+# Do not override the Python install phase — Nixpacks installs from requirements.txt.
 [phases.setup]
 nixPkgs = ["...", "gcc"]
 
