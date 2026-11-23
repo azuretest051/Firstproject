@@ -3,22 +3,37 @@
 from __future__ import annotations
 
 import logging
+import os
+from pathlib import Path
 from typing import Any
 
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.exceptions import RequestValidationError
-from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse, JSONResponse
+from fastapi.staticfiles import StaticFiles
 
 from src.api.schemas import (
     ErrorResponse,
     RecommendRequest,
     RecommendResponse,
 )
-from src.data.store import StoreError
+from src.data.paths import PROCESSED_DB_PATH
+from src.data.store import StoreError, list_cities, list_locations
 from src.preferences.schema import PreferenceValidationError
 from src.recommend.engine import recommend
 
 logger = logging.getLogger(__name__)
+
+_WEB_DIR = Path(__file__).resolve().parents[1] / "ui" / "web"
+
+
+def _cors_origins() -> list[str]:
+    """Parse CORS_ORIGINS (comma-separated). Default * for free-tier demos."""
+    raw = (os.getenv("CORS_ORIGINS") or "*").strip()
+    if raw == "*":
+        return ["*"]
+    return [origin.strip() for origin in raw.split(",") if origin.strip()]
 
 
 def create_app() -> FastAPI:
@@ -30,6 +45,15 @@ def create_app() -> FastAPI:
             "hard filters + Groq LLM ranking/explanations."
         ),
         version="0.1.0",
+    )
+
+    origins = _cors_origins()
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=origins,
+        allow_credentials=origins != ["*"],
+        allow_methods=["*"],
+        allow_headers=["*"],
     )
 
     @app.exception_handler(RequestValidationError)
@@ -61,8 +85,29 @@ def create_app() -> FastAPI:
         )
 
     @app.get("/health")
-    def health() -> dict[str, str]:
-        return {"status": "ok"}
+    def health() -> dict[str, Any]:
+        """Liveness for Railway / load balancers; reports SQLite presence."""
+        store_ready = PROCESSED_DB_PATH.is_file()
+        payload: dict[str, Any] = {
+            "status": "ok" if store_ready else "degraded",
+            "store_ready": store_ready,
+        }
+        if not store_ready:
+            payload["detail"] = (
+                f"Processed store missing at {PROCESSED_DB_PATH}. "
+                "Ship data/processed/restaurants.sqlite or set PROCESSED_DATA_PATH."
+            )
+        return payload
+
+    @app.get("/meta/locations")
+    def meta_locations() -> dict[str, Any]:
+        """City + neighborhood options for the Stitch preference form."""
+        try:
+            cities = list_cities()
+            locations = list_locations()
+        except StoreError as exc:
+            raise HTTPException(status_code=503, detail=str(exc)) from exc
+        return {"cities": cities, "locations": locations}
 
     @app.post(
         "/recommend",
@@ -91,6 +136,20 @@ def create_app() -> FastAPI:
                 status_code=500,
                 detail="An unexpected error occurred while generating recommendations.",
             ) from exc
+
+    # Stitch-faithful TasteMatch UI (desktop home + desktop results).
+    if _WEB_DIR.is_dir():
+        js_dir = _WEB_DIR / "js"
+        if js_dir.is_dir():
+            app.mount("/js", StaticFiles(directory=str(js_dir)), name="tm-js")
+
+        @app.get("/")
+        def ui_home() -> FileResponse:
+            return FileResponse(_WEB_DIR / "index.html")
+
+        @app.get("/results.html")
+        def ui_results() -> FileResponse:
+            return FileResponse(_WEB_DIR / "results.html")
 
     return app
 

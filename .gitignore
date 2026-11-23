@@ -26,7 +26,10 @@ data/raw/*
 !data/raw/.gitkeep
 data/processed/*
 !data/processed/.gitkeep
+# Ship processed SQLite for Railway/Vercel demos (Option A in Docs/deployment-plan.md)
+!data/processed/restaurants.sqlite
 *.sqlite
+!data/processed/restaurants.sqlite
 *.db
 
 # IDE / OS

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>TasteMatch AI - Epicurean Discovery</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-surface": "#e2e2e6", "error": "#ffb4ab", "on-error-container": "#ffdad6", "on-tertiary": "#5e1700", "surface-dim": "#111317", "on-secondary": "#472a00", "surface-bright": "#37393d", "secondary-fixed-dim": "#ffb95f", "inverse-primary": "#ae3115", "surface-container-high": "#282a2d", "secondary-fixed": "#ffddb8", "secondary-container": "#ee9800", "on-tertiary-fixed-variant": "#7f2a0d", "on-secondary-container": "#5b3800", "on-secondary-fixed-variant": "#653e00", "surface-container-lowest": "#0c0e11", "inverse-on-surface": "#2f3034", "secondary": "#ffb95f", "surface-container-highest": "#333538", "primary": "#ffb4a3", "on-tertiary-fixed": "#3a0b00", "on-primary": "#630f00", "on-primary-container": "#661000", "on-secondary-fixed": "#2a1700", "primary-fixed": "#ffdad2", "error-container": "#93000a", "tertiary-fixed-dim": "#ffb59e", "surface-tint": "#ffb4a3", "on-error": "#690005", "inverse-surface": "#e2e2e6", "primary-container": "#ff6b4a", "primary-fixed-dim": "#ffb4a3", "tertiary-container": "#eb7a56", "tertiary": "#ffb59e", "outline": "#a88a83", "surface-container-low": "#1a1c1f", "on-primary-fixed": "#3d0600", "surface": "#111317", "on-surface-variant": "#e1bfb8", "outline-variant": "#59413c", "tertiary-fixed": "#ffdbd0", "on-primary-fixed-variant": "#8c1900", "surface-container": "#1e2023", "on-background": "#e2e2e6", "on-tertiary-container": "#611800", "surface-variant": "#333538", "background": "#111317" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "gutter": "1rem", "space-sm": "0.5rem", "margin-lg": "3rem", "margin-md": "2rem", "space-md": "1rem", "margin": "1rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "gutter-md": "1.5rem" }, "fontFamily": { "body-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"] }, "fontSize": { "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-xl-mobile": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } }</script></head><body data-page="home" class="bg-surface-container-lowest font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-surface-container-highest shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-16 max-w-7xl mx-auto px-margin-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm group focus:outline-none" data-path="discover" href="#"><div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant group-hover:border-primary-container transition-colors"><span class="material-symbols-outlined text-primary-container text-[22px]">local_fire_department</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none group-hover:text-primary transition-colors">TasteMatch<span class="text-primary-container ml-0.5">AI</span></span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider scale-90 -ml-1 mt-0.5">Curated Metro</span></div></a><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-low border border-surface-container-highest hover:border-outline-variant transition-colors cursor-pointer"><span class="material-symbols-outlined text-primary-container text-[16px]">location_on</span><span class="font-label-md text-label-md text-on-surface">Bangalore, KA</span><span class="material-symbols-outlined text-on-surface-variant text-[14px]">expand_more</span></div></div><nav class="hidden lg:flex items-center gap-space-xs p-1 rounded-xl bg-surface-container-lowest border border-surface-container-highest" data-active-classes="bg-surface-container-high text-primary-container font-label-lg font-bold rounded-lg shadow-[0_0_12px_rgba(255,107,74,0.15)]"><a aria-current="page" class="px-space-md py-1.5 transition-all bg-surface-container-high text-primary-container font-label-lg font-bold rounded-lg shadow-[0_0_12px_rgba(255,107,74,0.15)]" data-path="discover" href="#">Discover</a><a class="px-space-md py-1.5 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all flex items-center gap-1.5" data-path="ai-tastematch" href="#"><span>AI TasteMatch</span><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span></a><a class="px-space-md py-1.5 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="food-map" href="#">Food Map</a><a class="px-space-md py-1.5 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all flex items-center gap-1.5" data-path="saved-picks" href="#"><span>Saved Picks</span><span class="px-1.5 py-0.2 rounded-full bg-surface-container-highest text-[10px] font-bold text-on-surface-variant">4</span></a></nav><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center relative w-56 lg:w-64"><span class="material-symbols-outlined text-on-surface-variant text-[18px] absolute left-3 pointer-events-none">search</span><input class="w-full pl-9 pr-10 py-1.5 rounded-lg bg-surface-container-low border border-surface-container-highest text-on-surface font-body-sm text-body-sm placeholder:text-on-surface-variant/60 focus:outline-none focus:border-primary-container transition-all" placeholder="Cuisines, micro-regions..." type="text"/><span class="absolute right-2 px-1.5 py-0.5 rounded bg-surface-container-highest text-[10px] font-mono text-on-surface-variant border border-surface-bright">⌘K</span></div><div class="flex items-center gap-space-xs"><button aria-label="Notifications" class="w-9 h-9 rounded-lg bg-surface-container-low border border-surface-container-highest flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:border-outline-variant hover:bg-surface-container transition-all relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary-container border-2 border-surface-container-lowest"></span></button><div class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center cursor-pointer ring-2 ring-primary-container/20 hover:ring-primary-container/50 transition-all ml-1"><span class="material-symbols-outlined text-on-primary-container text-[20px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-surface-container-lowest min-h-screen relative"><div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[320px] bg-gradient-to-b from-primary-container/10 via-secondary-container/5 to-transparent blur-3xl pointer-events-none -z-10"></div><div class="flex flex-col w-full">
+<!-- Dynamic Atmospheric Glow Container -->
+<div class="relative w-full overflow-hidden">
+<!-- Ambient Radial Thermal Aura -->
+<div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[1000px] h-[480px] bg-gradient-to-b from-primary-container/20 via-secondary-container/10 to-transparent blur-[120px] pointer-events-none -z-10"></div>
+<div class="absolute top-[320px] right-10 w-96 h-96 bg-primary-container/10 blur-[140px] pointer-events-none -z-10"></div>
+<div class="max-w-[1200px] mx-auto px-margin-lg py-space-xl flex flex-col gap-space-xl">
+<!-- HERO SECTION -->
+<section class="flex flex-col items-center text-center gap-space-md pt-4">
+<!-- Live Sensory Telemetry & Tagline Badge -->
+<div class="flex flex-wrap items-center justify-center gap-space-sm">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container border border-surface-container-highest shadow-sm">
+<span class="inline-block w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary">AI-POWERED GASTRONOMY &amp; SENSORY PALATE MATCHING</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-low text-secondary font-label-sm text-label-sm border border-secondary/20 shadow-inner">
+<span class="material-symbols-outlined text-[15px] text-secondary">bolt</span>
+<span>1,420+ flavor graphs mapped across Bangalore today</span>
+</div>
+</div>
+<!-- Master Editorial Headline -->
+<h1 class="font-headline-xl text-headline-xl text-on-surface max-w-4xl tracking-tight leading-[1.12]">
+          Personalized restaurant picks, <br/>
+<span class="text-primary-container relative inline-block">
+            explained by AI.
+            <svg class="absolute -bottom-2 left-0 w-full h-2 text-primary-container/40" preserveaspectratio="none" viewbox="0 0 100 8">
+<path d="M0,5 Q50,0 100,5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+</span>
+</h1>
+<!-- Subheading -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl text-balance">
+          Discover Bangalore’s finest dining calibrated to your exact taste, budget, and culinary vibe in seconds.
+        </p>
+</section>
+<!-- PREFERENCE FORM DESKTOP MASTER CARD -->
+<section class="w-full bg-surface-container-low rounded-2xl p-8 shadow-2xl relative">
+<!-- Subtle Coral Rim Glow for High Intent Area -->
+<div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-primary-container/60 to-transparent"></div>
+<form id="tm-prefs-form" class="flex flex-col gap-space-lg">
+<!-- ROW 1: Location dropdown -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center gap-2" for="tm-location">
+<span class="material-symbols-outlined text-primary-container text-[20px]">explore</span>
+<span>Location <span class="text-primary-container">*</span></span>
+</label>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70">Required · Bangalore metro areas</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-center">
+<div class="lg:col-span-5 relative">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-primary-container text-[20px] pointer-events-none">location_on</span>
+<select class="w-full appearance-none pl-11 pr-10 py-3 rounded-xl bg-surface-container text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary-container transition-all cursor-pointer" id="tm-location" name="location" required>
+<option value="" disabled selected>Select a location</option>
+</select>
+<span class="material-symbols-outlined absolute right-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px] pointer-events-none">expand_more</span>
+</div>
+<div class="lg:col-span-7 flex flex-wrap items-center gap-2" id="neighborhood-pills">
+<button class="px-3.5 py-1.5 rounded-full font-label-md text-label-md transition-all bg-surface-container text-on-surface hover:bg-surface-container-high" data-location="Koramangala" type="button">Koramangala</button>
+<button class="px-3.5 py-1.5 rounded-full font-label-md text-label-md transition-all bg-surface-container text-on-surface hover:bg-surface-container-high" data-location="Indiranagar" type="button">Indiranagar</button>
+<button class="px-3.5 py-1.5 rounded-full font-label-md text-label-md transition-all bg-surface-container text-on-surface hover:bg-surface-container-high" data-location="Lavelle Road" type="button">Lavelle Road</button>
+<button class="px-3.5 py-1.5 rounded-full font-label-md text-label-md transition-all bg-surface-container text-on-surface hover:bg-surface-container-high" data-location="HSR" type="button">HSR</button>
+<button class="px-3.5 py-1.5 rounded-full font-label-md text-label-md transition-all bg-surface-container text-on-surface hover:bg-surface-container-high" data-location="Church Street" type="button">Church Street</button>
+<button class="px-3.5 py-1.5 rounded-full font-label-md text-label-md transition-all bg-surface-container text-on-surface hover:bg-surface-container-high" data-location="Whitefield" type="button">Whitefield</button>
+</div>
+</div>
+</div>
+<div class="w-full h-[1px] bg-surface-container-highest/60"></div>
+<!-- ROW 2: Budget Segmented Control & Cuisines Multi-Select -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left 5-Cols: Budget Tier Segmented Control -->
+<div class="lg:col-span-5 flex flex-col gap-space-sm">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">payments</span>
+<span>Budget Envelope (Per Person)</span>
+</label>
+<div class="grid grid-cols-3 gap-1.5 p-1 rounded-xl bg-surface-container border border-surface-container-highest/50">
+<!-- Option 1 -->
+<button class="budget-btn flex flex-col items-center py-2.5 px-2 rounded-lg bg-surface-container-low text-on-surface hover:text-white transition-all text-center" type="button">
+<span class="font-label-md text-label-md font-bold">Low ₹</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">&lt; ₹800</span>
+</button>
+<!-- Option 2 (Active Default) -->
+<button class="budget-btn flex flex-col items-center py-2.5 px-2 rounded-lg bg-surface-container-high text-primary-container shadow-md border border-primary-container/30 transition-all text-center" type="button">
+<span class="font-label-md text-label-md font-bold">Medium ₹₹</span>
+<span class="font-label-sm text-[10px] text-primary">₹800–₹2,200</span>
+</button>
+<!-- Option 3 -->
+<button class="budget-btn flex flex-col items-center py-2.5 px-2 rounded-lg bg-surface-container-low text-on-surface hover:text-white transition-all text-center" type="button">
+<span class="font-label-md text-label-md font-bold">Fine Dining ₹₹₹</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">₹2,200+</span>
+</button>
+</div>
+</div>
+<!-- Right 7-Cols: Palate & Cuisine dropdown -->
+<div class="lg:col-span-7 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center gap-2" for="tm-cuisine">
+<span class="material-symbols-outlined text-primary-container text-[20px]">restaurant_menu</span>
+<span>Palate &amp; Cuisine <span class="text-primary-container">*</span></span>
+</label>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70">Required</span>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-primary-container text-[20px] pointer-events-none">restaurant_menu</span>
+<select class="w-full appearance-none pl-11 pr-10 py-3 rounded-xl bg-surface-container text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary-container transition-all cursor-pointer" id="tm-cuisine" name="cuisine" required>
+<option value="" disabled selected>Select a cuisine</option>
+<option value="North Indian">North Indian</option>
+<option value="Chinese">Chinese</option>
+<option value="South Indian">South Indian</option>
+<option value="Fast Food">Fast Food</option>
+<option value="Biryani">Biryani</option>
+<option value="Italian">Italian</option>
+<option value="Cafe">Cafe</option>
+<option value="Continental">Continental</option>
+<option value="Pizza">Pizza</option>
+<option value="Street Food">Street Food</option>
+</select>
+<span class="material-symbols-outlined absolute right-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px] pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<div class="w-full h-[1px] bg-surface-container-highest/60"></div>
+<!-- ROW 3: Rating Cut Slider & Natural Language Vibe Input -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left 4-Cols: Rating Slider -->
+<div class="lg:col-span-4 flex flex-col gap-space-md p-4 rounded-xl bg-surface-container">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">stars</span>
+<span>Minimum Foodie Rating</span>
+</label>
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container-highest text-secondary font-headline-sm text-headline-sm font-bold flex items-center gap-1" id="rating-val">
+                  4.0 <span class="material-symbols-outlined text-[16px]">star</span>
+</span>
+</div>
+<!-- Interactive Visual Slider Track -->
+<div class="flex flex-col gap-2">
+<input class="w-full h-2 rounded-lg bg-surface-container-highest accent-primary-container cursor-pointer transition-all" id="tm-rating" max="5.0" min="0.0" oninput="document.getElementById('rating-val').innerHTML = parseFloat(this.value).toFixed(1) + ' &lt;span class=\'material-symbols-outlined text-[16px]\'&gt;star&lt;/span&gt;'" step="0.1" type="range" value="4.0"/>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Any (0.0)</span>
+<span class="text-secondary font-bold">4.0 ★ Gastronomic Cut</span>
+<span>Flawless (5.0)</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant/80">
+                Filters community ratings against verified frequent epicurean check-ins.
+              </p>
+</div>
+<!-- Right 8-Cols: Natural Language Vibe Prompt -->
+<div class="lg:col-span-8 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">psychology</span>
+<span>Natural Language Vibe &amp; Sensory Atmosphere</span>
+</label>
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                  Sensory Vector Matching
+                </span>
+</div>
+<textarea class="w-full p-3.5 rounded-xl bg-surface-container text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant/40 focus:outline-none focus:ring-1 focus:ring-primary-container resize-none transition-all leading-relaxed" id="tm-vibe" placeholder="e.g., Rooftop seating with artisanal craft cocktails and wood-fired sourdough pizzas, quiet enough for conversation" rows="3"></textarea>
+<!-- Quick Tag Suggestions -->
+<div class="flex flex-wrap items-center gap-2 mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Suggested Prompts:</span>
+<button class="px-2.5 py-1 rounded-md bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm text-on-surface-variant hover:text-primary-container transition-colors" type="button" data-vibe="Candlelit Outdoor">+ Candlelit Outdoor</button>
+<button class="px-2.5 py-1 rounded-md bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm text-on-surface-variant hover:text-primary-container transition-colors" type="button" data-vibe="Craft Beer on Tap">+ Craft Beer on Tap</button>
+<button class="px-2.5 py-1 rounded-md bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm text-on-surface-variant hover:text-primary-container transition-colors" type="button" data-vibe="Chef's Tasting Menu">+ Chef's Tasting Menu</button>
+<button class="px-2.5 py-1 rounded-md bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm text-on-surface-variant hover:text-primary-container transition-colors" type="button" data-vibe="Pet-Friendly Garden">+ Pet-Friendly Garden</button>
+</div>
+</div>
+</div>
+<!-- ACTIONS ROW -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-2">
+<!-- Left Info Pill -->
+<div class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container border border-surface-container-highest">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span class="font-label-md text-label-md text-on-surface">
+<span class="font-bold text-secondary">48 curated venues</span> match these parameters
+              </span>
+</div>
+<!-- Right CTAs -->
+<div class="flex items-center gap-space-md w-full sm:w-auto justify-end">
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors px-3 py-2" type="button">
+                Clear all filters
+              </button>
+<button class="flex-1 sm:flex-none flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-primary-container text-on-primary font-label-lg text-label-lg font-bold shadow-[0_4px_24px_rgba(255,107,74,0.35)] hover:shadow-[0_4px_32px_rgba(255,107,74,0.5)] hover:bg-[#ff8a65] transition-all transform active:scale-95" id="tm-submit" type="submit"><span>Find Restaurants (AI Match)</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<p id="tm-form-status" class="hidden font-body-sm text-body-sm text-primary-container mt-2"></p></form>
+</section>
+<!-- TRENDING CURATIONS PREVIEW SECTION -->
+<section class="flex flex-col gap-space-lg pt-4 pb-12">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-xs">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">local_fire_department</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Sensory Radar</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-1">Trending Curations In Bangalore</h2>
+</div>
+<a class="font-label-md text-label-md text-primary-container hover:underline flex items-center gap-1 group" href="#">
+<span>Explore 140+ real-time neighborhood tables</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">east</span>
+</a>
+</div>
+<!-- 3 Cards Mosaic Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Card 1 (97% Match - Thermal Underglow) -->
+<article class="flex flex-col rounded-2xl bg-surface-container overflow-hidden transition-all duration-300 hover:-translate-y-1.5 shadow-[0_4px_24px_-2px_rgba(255,107,74,0.15)] ring-1 ring-primary-container/30 group">
+<!-- Image Frame -->
+<div class="relative w-full h-52 overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Exquisite dimly lit chef's counter at an avant-garde restaurant with glowing charcoal embers, searing high-end culinary plating, warm amber ambient backlighting, close-up of charcoal grilled gastronomy in Bangalore" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFdX9Uk8X3WdSeo4HMPplhW4PNEBPBlcK6O6Mxfl-Pt6fsVaPR0-ff26hNwDKm1avKb1V_PabkCgUiezhkBCjxUwceVujnEuMKrW2hgZqN33ljXADhB9CSokNeoOBCdQ50ClS-crDBLCMn8_3NESm13LuL-Maf6lC5ohAJO0ExYHWse9KpipWa1j0ooRE0KkZSN7yqY6nM6gmuA_Pi6rFNoeM9pOFak-kJA6ZvPdU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/20 to-transparent"></div>
+<!-- Badges on Image -->
+<div class="absolute top-3 left-3 flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-primary font-label-md text-label-md font-bold border border-primary-container/30">
+<span class="material-symbols-outlined text-primary-container text-[16px]">local_fire_department</span>
+<span>97% Taste Affinity</span>
+</div>
+<div class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-secondary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">star</span> 4.9
+              </div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1 text-on-surface font-semibold">
+<span class="material-symbols-outlined text-primary-container text-[14px]">location_on</span>
+                  Indiranagar, 100ft Rd
+                </span>
+<span class="text-secondary font-bold">₹2,800 for two</span>
+</div>
+</div>
+<!-- Content Area -->
+<div class="p-space-md flex flex-col gap-space-sm flex-1">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">The Charcoal Atelier</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Wood-Fired Progressive Grill &amp; Ferment Bar</p>
+</div>
+<!-- AI Rationale Callout -->
+<div class="p-3 rounded-lg bg-surface-container-low border-l-2 border-primary-container flex flex-col gap-1">
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">auto_awesome</span> Why TasteMatch Picked This
+                </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Matched for your affinity toward smoky sourdough notes and charred umami reduction with intimate counter vibes.
+                </p>
+</div>
+<!-- Dish Pills -->
+<div class="flex flex-wrap gap-1.5 pt-1 mt-auto">
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface">Smoked Butter Crudo</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface">Artisanal Brioche</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface">Smoky Mezcal Sour</span>
+</div>
+</div>
+</article>
+<!-- Card 2 (95% Match) -->
+<article class="flex flex-col rounded-2xl bg-surface-container overflow-hidden transition-all duration-300 hover:-translate-y-1.5 shadow-xl hover:shadow-[0_4px_24px_-2px_rgba(255,185,95,0.15)] ring-1 ring-surface-container-highest group">
+<!-- Image Frame -->
+<div class="relative w-full h-52 overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Lush tropical rooftop botanical dining veranda at night in Bangalore, warm filament fairy lighting, brass artisanal craft cocktail shakers, wooden dining furniture surrounded by foliage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC65oG4x5Tr3attArzZBlSPn7MIwJA-CWmJjue96q4lQcL1cQSFABtVwK-vSNgCUw4QDXH2iorISyqvKJsfdiuCMt6-QBkzy85b9ujnT-xBE58q8GEOz_j3Ie5UCkz4oXY_e4FfvXqVfPecbwkaMBAWv0Lo0xVo3SboVe5LrwCfd971vzAmOvcmghYgdj8OuS9oYF-XFrAEUxNtUJTN3OGu3uRao5020R3O_BTGf_Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/20 to-transparent"></div>
+<!-- Badges on Image -->
+<div class="absolute top-3 left-3 flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-secondary font-label-md text-label-md font-bold border border-secondary/30">
+<span class="material-symbols-outlined text-secondary text-[16px]">local_fire_department</span>
+<span>95% Taste Affinity</span>
+</div>
+<div class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-secondary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">star</span> 4.7
+              </div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1 text-on-surface font-semibold">
+<span class="material-symbols-outlined text-primary-container text-[14px]">location_on</span>
+                  Koramangala, 5th Block
+                </span>
+<span class="text-secondary font-bold">₹1,900 for two</span>
+</div>
+</div>
+<!-- Content Area -->
+<div class="p-space-md flex flex-col gap-space-sm flex-1">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">The Permit Room</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Modern South Indian &amp; Botanical Mixology</p>
+</div>
+<!-- AI Rationale Callout -->
+<div class="p-3 rounded-lg bg-surface-container-low border-l-2 border-secondary flex flex-col gap-1">
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-secondary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">auto_awesome</span> Why TasteMatch Picked This
+                </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Fits your high spicy-tangy balance preference and outdoor breeze criteria; top marks for ghee roasts &amp; spiced gin.
+                </p>
+</div>
+<!-- Dish Pills -->
+<div class="flex flex-wrap gap-1.5 pt-1 mt-auto">
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface">Pandi Fry</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface">Gunpowder Prawns</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface">Curry Leaf Gin</span>
+</div>
+</div>
+</article>
+<!-- Card 3 (92% Match) -->
+<article class="flex flex-col rounded-2xl bg-surface-container overflow-hidden transition-all duration-300 hover:-translate-y-1.5 shadow-xl hover:shadow-[0_4px_24px_-2px_rgba(255,107,74,0.15)] ring-1 ring-surface-container-highest group">
+<!-- Image Frame -->
+<div class="relative w-full h-52 overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Rich traditional Indian Awadhi copper handi with slow simmering Dum Pukht biryani, aromatic saffron steam rising, saffron rice strands, caramelized shallots, warm atmospheric candlelight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqyU6sbfgm1Rnix4RKn0ySGnhXq-TLs3Xbt7oEX-ZsJigI4UyZV4tx1T8lbgZw0mbzoOb-jF7bA2E-jFDmrDeyvGl6vfYe_3UEc9u2NGDP-ewJMbOuQ1KtNyOeidzXlEQtqMysn51lCxegRBrSIT3ApMliVwpuQtsDNv69n-IVCX4JdqkOxmJzfhHCWypDl1x-uSktiNqeHekVZwowzcTWWqYJ1_a9pwbzx5odaIU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/20 to-transparent"></div>
+<!-- Badges on Image -->
+<div class="absolute top-3 left-3 flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-primary font-label-md text-label-md font-bold border border-primary/30">
+<span class="material-symbols-outlined text-primary-container text-[16px]">local_fire_department</span>
+<span>92% Taste Affinity</span>
+</div>
+<div class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-secondary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">star</span> 4.8
+              </div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1 text-on-surface font-semibold">
+<span class="material-symbols-outlined text-primary-container text-[14px]">location_on</span>
+                  Lavelle Road, Central
+                </span>
+<span class="text-secondary font-bold">₹1,600 for two</span>
+</div>
+</div>
+<!-- Content Area -->
+<div class="p-space-md flex flex-col gap-space-sm flex-1">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">Meghana Reserve</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Slow-Cooked Dum &amp; Hyderabadi Heritage</p>
+</div>
+<!-- AI Rationale Callout -->
+<div class="p-3 rounded-lg bg-surface-container-low border-l-2 border-primary-container flex flex-col gap-1">
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">auto_awesome</span> Why TasteMatch Picked This
+                </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  High heat-tolerance alignment: heavy star anise, mace infusions, and hand-ground green chilli profiles rated #1 by your cohort.
+                </p>
+</div>
+<!-- Dish Pills -->
+<div class="flex flex-wrap gap-1.5 pt-1 mt-auto">
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface">Special Dum Biryani</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface">Mutton Ghee Chukka</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface">Mirchi Ka Salan</span>
+</div>
+</div>
+</article>
+</div>
+</section>
+</div>
+</div>
+</div>
+<script>
+  // Micro-interaction logic for budget segmented control
+  document.addEventListener('DOMContentLoaded', () => {
+    const budgetBtns = document.querySelectorAll('.budget-btn');
+    budgetBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        budgetBtns.forEach(b => {
+          b.className = 'budget-btn flex flex-col items-center py-2.5 px-2 rounded-lg bg-surface-container-low text-on-surface hover:text-white transition-all text-center';
+          const sub = b.querySelector('.font-label-sm');
+          if (sub) sub.className = 'font-label-sm text-[10px] text-on-surface-variant';
+        });
+        btn.className = 'budget-btn flex flex-col items-center py-2.5 px-2 rounded-lg bg-surface-container-high text-primary-container shadow-md border border-primary-container/30 transition-all text-center';
+        const activeSub = btn.querySelector('.font-label-sm');
+        if (activeSub) activeSub.className = 'font-label-sm text-[10px] text-primary';
+      });
+    });
+  });
+</script></main><footer class="w-full bg-surface-container-lowest border-t border-surface-container-highest mt-auto"><div class="max-w-7xl mx-auto px-margin-lg py-space-xl"><div class="grid grid-cols-1 md:grid-cols-4 gap-space-xl pb-space-xl border-b border-surface-container-highest"><div class="md:col-span-1 flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><div class="w-7 h-7 rounded bg-surface-container flex items-center justify-center border border-outline-variant"><span class="material-symbols-outlined text-primary-container text-[18px]">local_fire_department</span></div><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">TasteMatch<span class="text-primary-container">AI</span></span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Searing palate intelligence for urban diners across Bengaluru's dynamic micro-neighborhoods.</p><div class="flex items-center gap-2 mt-2"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Bangalore Live Grid Active</span></div></div><div class="flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-on-surface mb-space-xs">Curations</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="discover" href="#">Indiranagar Wood-Fired</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="discover" href="#">Koramangala Coastal</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="discover" href="#">Lavelle Chef's Tables</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="discover" href="#">Malleshwaram Heritage</a></div><div class="flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-on-surface mb-space-xs">Intelligence</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="ai-tastematch" href="#">Taste Affinity Engine</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="food-map" href="#">Heat Index Radar</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="food-map" href="#">Midnight Supper Map</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="saved-picks" href="#">Shared Palates</a></div><div class="flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-on-surface mb-space-xs">Legal &amp; Standards</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="terms-of-service" href="#">Terms of Service</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="curation-guidelines" href="#">Curation Standards</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="partner-onboarding" href="#">Chef &amp; Restaurateur Ingestion</a></div></div><div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-md"><p class="font-body-sm text-body-sm text-on-surface-variant/80 text-center md:text-left"><span class="font-bold text-on-surface">Algorithmic Notice:</span> TasteMatch culinary affinity indicators reflect real-time neural mapping of consumer flavor palates, ingredient histories, and spice tolerance indexes across verified Bangalore dining rooms.</p><p class="font-label-sm text-label-sm text-on-surface-variant shrink-0">© 2025 TasteMatch AI Inc. Bengaluru.</p></div></div></footer><script src="/js/app.js"></script></body></html>

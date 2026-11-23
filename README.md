@@ -52,7 +52,8 @@ FirstProjectAi/
 │   ├── llm/              # Prompt, client, parser
 │   ├── recommend/        # Orchestration engine
 │   ├── api/              # FastAPI routes (Phase 4)
-│   └── ui/               # Streamlit UI (Phase 5)
+│   └── ui/               # Legacy static / Streamlit UI
+├── frontend/             # Next.js TasteMatch UI (Phase 5+)
 ├── tests/
 ├── .env.example
 ├── requirements.txt
@@ -125,14 +126,38 @@ Open interactive docs at `http://127.0.0.1:8000/docs`.
 
 ## Phase 5 — UI
 
-Run the Streamlit preference form (calls the same `recommend()` engine as the API/CLI):
+### Next.js frontend (recommended)
+
+React/Next.js App Router UI in `frontend/` — TasteMatch design system, preference form, and results with AI explanations. Proxies FastAPI via rewrites.
 
 ```powershell
+# Terminal 1 — API
 .\.venv\Scripts\Activate.ps1
-streamlit run src/ui/app.py
+python -m uvicorn src.api.routes:app --reload --host 127.0.0.1 --port 8000
+
+# Terminal 2 — Next.js
+cd frontend
+npm install
+npm run dev
 ```
 
-Enter location, budget, cuisine, minimum rating, and optional soft preferences, then submit. Results show name, cuisine, rating, cost, and the AI explanation. Empty matches and LLM fallback are surfaced in the UI.
+Open **http://localhost:3000** — submit preferences → ranked results on `/results`.
+
+See [`frontend/README.md`](frontend/README.md) for env (`BACKEND_URL`) and scripts.
+
+### Legacy static Stitch UI (FastAPI-served)
+
+```powershell
+python -m uvicorn src.api.routes:app --reload --host 127.0.0.1 --port 8000
+```
+
+Open **http://127.0.0.1:8000/** for the HTML screens in `src/ui/web/`.
+
+### Streamlit fallback
+
+```powershell
+python -m streamlit run src/ui/app.py
+```
 
 Requires Phase 1 ingest (`data/processed/restaurants.sqlite`). Without a Groq key, ranking still works via the rating-sorted fallback.
 
@@ -144,8 +169,19 @@ Requires Phase 1 ingest (`data/processed/restaurants.sqlite`). Without a Groq ke
 
 ## Environment variables
 
-See [`.env.example`](.env.example) for `LLM_API_KEY`, model settings, candidate cap, and processed data path.
+See [`.env.example`](.env.example) for `GROQ_API_KEY`, model settings, candidate cap, processed data path, and `CORS_ORIGINS`.
+
+## Deploy (free)
+
+Frontend → **Vercel**, backend → **Railway**. Full steps: [`Docs/deployment-plan.md`](Docs/deployment-plan.md).
+
+Quick map:
+
+| Host | Root / config | Key env |
+|---|---|---|
+| Railway | repo root (`Procfile`, `railway.toml`) | `GROQ_API_KEY`, `PROCESSED_DATA_PATH`, `CORS_ORIGINS` |
+| Vercel | `frontend/` (`vercel.json`) | `BACKEND_URL=https://<railway-domain>` |
 
 ## Status
 
-**Phase 5 complete** — Streamlit UI at `src/ui/app.py` demos the full preference → filter → LLM → results flow. Next: Phase 6 (hardening).
+**Phase 5 complete** — Next.js UI at `http://localhost:3000` (with FastAPI on `:8000`) demos preference → filter → LLM → results. Deploy configs for Vercel + Railway are in-repo. Next: Phase 6 (hardening).
